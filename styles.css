@@ -1,41 +1,42 @@
 :root {
     --background-color: #00090E;
-    --text-color: #e1e1e1;
-    --primary-color: #81fe88;
-    --secondary-color:#888888;
+    --text-color: #E1E1E1;
+    --primary-color: #81FE88;
+    --secondary-color: #888888;
+    --tag-color: #171D1F;
     --font-family: "Prompt", sans-serif;
-    --itens-background: #171d1f;
+    --itens-background: #171D1F;
 }
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     background-color: var(--background-color);
     color: var(--text-color);
     font-family: var(--font-family);
 
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
 
-    height: 100%;
+    height: 100vh;
     gap: 27px;
     padding: 56px 0;
 }
 
-aside{
+aside {
     background-color: var(--itens-background);
     border-radius: 10px;
-    height: 90%;
-    padding: 28px 16px;
+    height: 100%;
+    padding: 40px 16px;
     text-align: center;
 }
 
-.lista-links{
+.lista-links {
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -44,7 +45,7 @@ aside{
     list-style-type: none;
 }
 
-.lista-links li a{
+.lista-links li a {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -55,16 +56,16 @@ aside{
 }
 
 .lista-links li:first-of-type a {
-    color:var(--primary-color);
+    color: var(--primary-color);
 }
 
-.link-destaque{
+.link-destaque {
     border: 1px solid var(--primary-color);
     padding: 12px 30px;
     border-radius: 8px;
 }
 
-main{
+main {
     background-color: var(--itens-background);
     border-radius: 10px;
     padding: 32px;
@@ -72,26 +73,27 @@ main{
     gap: 24px;
 }
 
-h2{
+h2 {
     font-size: 26px;
     margin-bottom: 40px;
     font-weight: 600;
 }
 
-form{
+form {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 24px
 }
 
-form div label{
+form div label {
     font-size: 18px;
     font-weight: 400;
     display: block;
     margin-bottom: 8px;
 }
 
-form div input, textarea{
+form div input,
+textarea {
     width: 100%;
     padding: 8px 16px;
     background-color: var(--secondary-color);
@@ -101,15 +103,15 @@ form div input, textarea{
     line-height: 22.5px;
 }
 
-form div input{
+form div input {
     height: 39px;
 }
 
-textarea{
+texarea {
     height: 161px;
 }
 
-.lista-tags li{
+.lista-tags li {
     display: flex;
     background-color: var(--secondary-color);
     color: var(--background-color);
@@ -118,18 +120,18 @@ textarea{
     border-radius: 4px;
 }
 
-.lista-tags{
+
+.lista-tags {
     display: flex;
-    gap: 5px;
 }
 
-.container-botoes{
+.container-botoes {
     display: flex;
     gap: 24px;
     justify-content: space-between;
 }
 
-.container-botoes button{
+.container-botoes button {
     width: 50%;
     padding: 12px 32px 12px 12px;
     text-align: center;
@@ -139,14 +141,14 @@ textarea{
     font-weight: 500;
 }
 
-.botao-descartar{
+.botao-descartar {
     background-color: var(--itens-background);
     color: var(--primary-color);
     border: 1px solid var(--primary-color);
     position: relative;
 }
 
-.botao-descartar::after{
+.botao-descartar::after {
     content: "";
     background-image: url("./img/trash.svg");
     background-size: contain;
@@ -160,16 +162,16 @@ textarea{
     margin-left: 8px;
 }
 
-.botao-publicar{
+.botao-publicar {
     background-color: var(--primary-color);
     color: var(--background-color);
     border: none;
     position: relative;
 }
 
-.botao-publicar::after{
+.botao-publicar::after {
     content: "";
-    background-image: url(./img/arrow_forward2.svg);
+    background-image: url("../img/arrow_forward2.svg");
     background-size: contain;
     background-repeat: no-repeat;
     width: 15px;
@@ -181,26 +183,26 @@ textarea{
     margin-left: 8px;
 }
 
-.container-descricao{
+.container-descricao {
     width: 422px;
 }
 
-.main-imagem{
+.main-imagem {
     border-radius: 8px;
     height: 100%;
     object-fit: cover;
 }
 
-.container-imagem{
+.container-imagem {
     height: 368px;
     padding: 24px 16px;
     background-color: var(--secondary-color);
     border-radius: 8px;
 }
 
-.container-upload-imagem button{
+.container-upload-imagem button {
     margin: 16px 0 8px 0;
-    background-color: var(--background-color);
+    background-color: var(--itens-background);
     border: 1px solid var(--secondary-color);
     border-radius: 8px;
     color: var(--secondary-color);
@@ -213,21 +215,21 @@ textarea{
     position: relative;
 }
 
-.container-upload-imagem button::after{
+.container-upload-imagem button::after {
     content: "";
-    background-image: url(./img/upload.svg);
-    background-repeat: no-repeat; 
+    background-image: url("./img/upload.svg");
     background-size: contain;
+    background-repeat: no-repeat;
     display: inline-block;
     width: 15px;
     height: 15px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    margin-left: 8px;
+    margin-left: 8px
 }
 
-.container-imagem-nome{
+.container-imagem-nome {
     display: flex;
     gap: 8px;
     color: var(--secondary-color);
